@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Haozhe Lu | Student Page</title>
+    <style>
+        #main {
+            width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #wrapper1 {
+            display: flex;
+        }
+        #main1{
+            width: 450px;
+        }
+        #main2{
+            width: 450px;
+        }
+        #wrapper2 {
+            display: flex;
+        }
+        #main3{
+            width: 450px;
+        }
+        #main4{
+            width: 450px;
+        }
+        @media (max-width: 767px) {
+            #wrapper1, #wrapper2{
+                flex-direction: column;
+                justify-content: center;
+            }
+            #main, #main1, #main2, #main3, #main4 {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+    
+    <body>
+        <div id="main">
+            <h1>Haozhe Lu</h1>
+            <p><a href= "mailto:haozhelu@usc.edu">haozhelu@usc.edu</a></p>
+            <hr>
+            <button id="ColorButton">Favorite Color</button>
+            <div id="wrapper2">
+                <div id="main3">
+                    <p>Assignments:</p>
+                    <ul>
+                    </ul>
+                </div>
+                <div id="main4">
+                    <p>Labs:</p>
+                    <ul>
+                        <li><a href="index.html">Lab 1: Student Page</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.querySelector("#ColorButton").onclick = function(){
+                document.querySelector("body").style.backgroundColor = 'yellow';
+            }
+        </script>
+    </body>
+    
+</html>
