@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shopping Cart</title>
+    <style>
+         #header {
+            background: #800101;
+			height: 200px;
+            line-height: 200px;
+			color: #FFF;
+			font-size: 1.5em;
+			text-align: center;
+		}
+        #footer {
+            background: #000000;
+			height: 50px;
+            line-height: 50px;
+			color: #FFF;
+			text-align: center;
+        }
+        
+        #cars {
+            flex-wrap: wrap;
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+        }
+        .auto {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+        }
+        .img {
+            height: 200px;
+            width: auto;
+            margin: auto;
+        }
+        body {
+            margin: 0px;
+            padding:0px;
+        }
+        .auto > strong{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+        #cart {
+            text-align: right;
+            margin-right: 50px;
+        }
+        #cart > strong {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Automobile Cart</h1>
+    </div>
+    <div id="main">
+        <div id="cars">
+            <div id="car1" class="auto">
+                <img class="img" src="img/img_1.jpg" alt="2024 Audi A4">
+                <strong>2024 Audi A4</strong>
+                <strong>$41200</strong>
+            </div>
+            <div id="car2" class="auto">
+                <img class="img" src="img/img_2.png" alt="2023 Mercedes-Benz C300">
+                <strong>2023 Mercedes-Benz C300</strong>
+                <strong>$46000</strong>
+            </div>
+            <div id="car3" class="auto">
+                <img class="img" src="img/img_3.png" alt="2024 BMW X5">
+                <strong>2024 BMW X5</strong>
+                <strong>$65200</strong>
+            </div>
+        </div>
+
+        <div id="cart">
+            <strong>Cart Subtotal: $<span id="cart-value">0</span></strong>
+        </div>
+    </div>
+	<div id="footer">
+        <h3>Automobile Cart</h3>
+    </div>
+    
+    <!-- here's the workflow:
+        1. create a variable to record the cart subtotal, which is 0 at the beginning,
+        2. detect the user clicking on a product,
+        3. add the corresponding price of the product to the variable,
+        4. display the new value of the variable in the appropriate <span> tag,
+        5. when the user clicks on any of the product again, repeat the above steps.
+    -->
+        
+	<script>
+		var cartsub = 0;            // this is the variable recording the subtotal
+		document.querySelector('#car1').onclick = function(){   // when the product is clicked
+            cartsub += 41200;       // add the car's price to the subtotal
+			document.querySelector("#cart-value").innerHTML = cartsub; // change the subtotal to the new value
+		};
+        document.querySelector('#car2').onclick = function(){
+            cartsub += 46000;
+			document.querySelector("#cart-value").innerHTML = cartsub;
+		};
+        document.querySelector('#car3').onclick = function(){
+            cartsub += 65200;
+			document.querySelector("#cart-value").innerHTML = cartsub;
+		};
+		
+	</script>
+</body>
+</html>
