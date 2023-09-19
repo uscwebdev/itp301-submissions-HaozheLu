@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Liar’s Dice</title>
+    <style>
+        h1{
+            text-align: center;
+            font-size: 3.0em;
+        }
+        #input{
+           width: 50%;
+           margin-left: auto;
+           margin-right: auto;
+        }
+        #input-field {
+            margin-left: auto;
+            margin-right: auto;
+            width: 75%;
+            height: 40px;
+            font-size: 20px;
+        }
+        #input-button {
+            width: 150px;
+            height: 50px;
+            font-size: 20px;
+        }
+        h2{
+            font-size: 3.0em;
+        }
+        #output{
+            margin-left: auto;
+            margin-right: auto;
+            width: 75%;
+        }
+        #imgs {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .img {
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Liar’s Dice</h1>
+    </div>
+    <div id="main">
+        <div id="input">
+            <input type="text" id="input-field" placeholder="Enter your guess here">
+			<button id="input-button">Submit</button>
+        </div>
+        <div id="output">
+            <h2>Results: <span id="display"></span></h2>
+        </div>
+        <div id="imgs">
+            <img id="img1" src="img/1.png" alt="Number 1" class="img">
+            <img id="img2" src="img/1.png" alt="Number 1" class="img">
+            <img id="img3" src="img/1.png" alt="Number 1" class="img">
+            <img id="img4" src="img/1.png" alt="Number 1" class="img">
+            <img id="img5" src="img/1.png" alt="Number 1" class="img">
+        </div>
+    </div>
+    
+    
+    <script>
+        function ifGuessed(arr, value) {
+            for (var i = 0; i < arr.length; i++) {
+                if (value == arr[i]) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        document.querySelector("#input-button").onclick = function(){
+            var guess = document.querySelector("#input-field").value;
+            var arr = [];
+            for (var i = 0; i < 5; i++) {
+                arr[i] = Math.floor( Math.random() * 6 + 1 );
+            }
+            var img = [];
+            img = document.querySelectorAll(".img");
+            for (var i = 0; i < 5; i++) {
+                img[i].src = "img/" + arr[i] + ".png";
+                img[i].alt = "Number " + arr[i];
+            }
+            var guessed = ifGuessed(arr, guess);
+            if (guessed == true) {
+                document.querySelector("#display").innerHTML = "You guessed it correctly!";
+                document.querySelector("#display").style.color = "green";
+            }
+            else {
+                document.querySelector("#display").innerHTML = "Wrong, try again!";
+                document.querySelector("#display").style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Updated Photo Gallery</title>
+	<style>
+
+        #header{
+            height: 150px;
+            line-height: 150px;
+        }
+        h1{            
+            text-align: center;
+        }
+        #thumbnails {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .galimg{
+            margin: auto;
+            overflow: hidden;
+            width: 200px;
+            height: 200px;
+        }
+        .img{
+            width: auto;
+            height: 100%;
+        }
+        #mainimg {
+            width: 100%;
+        }
+        #main{
+            margin-top: 30px;
+            margin-left: 100px;
+            margin-right: 100px;
+            width: 100%;
+            flex-direction: column;
+            border: 7px solid black;
+        }
+        body{
+            margin: 0px;
+            padding:0px;
+        }
+    </style>
+</head>
+
+    <body>
+        <div id="header">
+            <h1>Updated Supercars Gallery</h1>
+        </div>
+
+        <div id="all">
+            <div id="thumbnails">
+                <div class="galimg" id="img1">
+                    <img class="img" src="img/img_01.jpg" alt="Mercedes-AMG GTR">
+                </div>
+                <div class="galimg" id="img2">
+                    <img class="img" src="img/img_02.jpg" alt="Acura NSX">
+                </div>
+                <div class="galimg" id="img3">
+                    <img class="img" src="img/img_03.jpg" alt="Porsche 911">
+                </div>
+                <div class="galimg" id="img4">
+                    <img class="img" src="img/img_04.jpg" alt="Maserati MC20">
+                </div>
+                <div class="galimg" id="img5">
+                    <img class="img" src="img/img_05.jpg" alt="Tesla Roadster">
+                </div>    
+                <div id="main">
+                    <img id="mainimg" src="img/img_01.jpg" alt="Mercedes-AMG GTR">
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.querySelector("#img1").onclick = function(){
+                document.querySelector("#mainimg").src = "img/img_01.jpg";
+                document.querySelector("#mainimg").alt = "Mercedes-AMG GTR";
+            }
+            document.querySelector("#img2").onclick = function(){
+                document.querySelector("#mainimg").src = "img/img_02.jpg";
+                document.querySelector("#mainimg").alt = "Acura NSX";
+            }
+            document.querySelector("#img3").onclick = function(){
+                document.querySelector("#mainimg").src = "img/img_03.jpg";
+                document.querySelector("#mainimg").alt = "Porsche 911";
+            }
+            document.querySelector("#img4").onclick = function(){
+                document.querySelector("#mainimg").src = "img/img_04.jpg";
+                document.querySelector("#mainimg").alt = "Maserati MC20";
+            }
+            document.querySelector("#img5").onclick = function(){
+                document.querySelector("#mainimg").src = "img/img_05.jpg";
+                document.querySelector("#mainimg").alt = "Tesla Roadster";
+            }
+        </script>
+    </body>
+</html>
