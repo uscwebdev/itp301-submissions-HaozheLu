@@ -1,1 +1,1 @@
-https://github.com/uscwebdev/itp301-submissions-HaozheLu.git
+https://uscwebdev.github.io/itp301-submissions-HaozheLu
