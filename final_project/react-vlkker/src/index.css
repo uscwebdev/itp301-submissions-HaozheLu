@@ -1,0 +1,108 @@
+#first {
+  display: flex;
+  flex-direction: row;
+  background-image: url('https://wallpapers.com/images/hd/phoenix-suns-gerald-green-digital-fanart-z7mmukfsg35hzhb9.jpg');
+  background-position: center;
+  height: 800px;
+}
+#first-left {
+  width: 50%;
+  color: rgb(255, 255, 255);
+  font-size: 2em;
+}
+#text {
+  position: relative;
+  left: 50px;
+  top: 250px;
+}
+#first-right {
+  width: 25%;
+  position: absolute;
+  right: 50px;
+  padding-top: 100px;
+}
+
+#first-right strong {
+  color: #f0f0f0;
+  font-size: 1.5em;
+  display: flex;
+}
+
+.roster-header {
+  background: #ff9500;
+  height: 200px;
+  line-height: 200px;
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.Player {
+  display: flex;
+  border: 1px solid #ccc;
+  margin: auto;
+  padding: 10px;
+  position: relative;
+  width: 70%;
+  box-shadow: 1px 5px 6px rgba(130, 123, 123, 0.094);
+  margin-bottom: 10px;
+}
+
+.PlayerImg {
+  margin-right: 20px;
+  width: auto;
+  height: 250px;
+}
+
+.PlayerInfo {
+  flex: 1;
+  font-size: 1.2em;
+  padding-left: 30px;
+}
+
+#bio {
+  background-color: rgb(248, 147, 6);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  bottom: 15px;
+  height: 50px;
+  width: 100px;
+}
+
+.box {
+  border: 1px solid black;
+  padding: 20px;
+  margin: 10px;
+}
+
+.box h3 {
+  color: #daa520;
+}
+
+.SeasonBox {
+  width: 70%;
+  margin: auto;
+}
+
+.SeasonBox p {
+  font-size: 1.2em;
+}
+.SeasonBox h3 {
+  font-size: 1.5em;
+  color: #ff9500;
+}
+button {
+  padding: 15px 25px;
+  background-color: orange;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#Addbutton {
+  display: block;
+  margin: 0 auto;
+}
